@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaFlow Plumbing | Professional Plumbing Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary: #1a6dba;
+            --secondary: #0dcaf0;
+            --dark: #212529;
+            --light: #f8f9fa;
+            --accent: #ff6b00;
+            --success: #198754;
+            --plumber-blue: #1a6dba;
+            --plumber-light: #e6f4ff;
+            --whatsapp-green: #25D366;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--plumber-blue);
+            border-radius: 2px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--plumber-blue);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .btn:hover {
+            background: #155a9c;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(13, 110, 253, 0.25);
+        }
+        
+        .btn-secondary {
+            background: var(--accent);
+        }
+        
+        .btn-secondary:hover {
+            background: #e55e00;
+            box-shadow: 0 6px 12px rgba(255, 107, 0, 0.25);
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            font-size: 2.5rem;
+            color: var(--plumber-blue);
+            margin-right: 10px;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            color: var(--dark);
+            font-weight: 700;
+        }
+        
+        .logo span {
+            color: var(--plumber-blue);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: var(--plumber-blue);
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--plumber-blue);
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark);
+        }
+        
+        /* Hero Section */
+        .hero {
+            
+			background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://plus.unsplash.com/premium_photo-1661884973994-d7625e52631a?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1475&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding-top: 70px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-image {
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .service-card:hover .service-image img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        
+        .service-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .service-content p {
+            margin-bottom: 20px;
+            color: #666;
+            flex-grow: 1;
+        }
+        
+        .service-btn {
+            margin-top: auto;
+            align-self: flex-start;
+        }
+        
+        /* About Section */
+        .about {
+            background: white;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .about-text p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .feature i {
+            color: var(--plumber-blue);
+            font-size: 1.5rem;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        
+        .feature-text h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom right, rgba(26, 109, 186, 0.2), transparent);
+            z-index: 1;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Why Choose Us */
+        .why-us {
+            background: linear-gradient(to right, var(--plumber-blue), #1a8cd8);
+            color: white;
+        }
+        
+        .why-us .section-title h2 {
+            color: white;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s ease, background 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .benefit-card i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        /* Testimonials Slider */
+        .testimonials {
+            background-color: var(--plumber-light);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonials-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            height: 400px;
+        }
+        
+        .testimonial-slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 100%;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            margin: 0 15px;
+            min-width: calc(100% - 30px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            height: 100%;
+        }
+        
+        .testimonial::before {
+            content: """;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 5rem;
+            color: var(--plumber-blue);
+            opacity: 0.1;
+            font-family: Georgia, serif;
+        }
+        
+        .testimonial-content {
+            margin-bottom: 30px;
+            font-style: italic;
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--plumber-blue);
+            background: var(--plumber-light);
+        }
+        
+        .author-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+        
+        .author-info p {
+            color: #777;
+        }
+        
+        .testimonial-controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 10px;
+        }
+        
+        .testimonial-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .dot.active {
+            background: var(--plumber-blue);
+        }
+        
+        .testimonial-btn {
+            background: var(--plumber-blue);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+        }
+        
+        .testimonial-btn:hover {
+            background: #155a9c;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: white;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--dark);
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .contact-detail i {
+            font-size: 1.5rem;
+            color: var(--plumber-blue);
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        
+        .contact-detail h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            border-color: var(--plumber-blue);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(26, 109, 186, 0.1);
+        }
+        
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        /* Newsletter CTA Section */
+        .newsletter-cta {
+            background: linear-gradient(to right, var(--plumber-blue), #1a8cd8);
+            color: white;
+            padding: 70px 0;
+            text-align: center;
+        }
+        
+        .newsletter-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .newsletter-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .newsletter-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border-radius: 50px;
+            overflow: hidden;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 15px 25px;
+            border: none;
+            font-size: 1rem;
+            outline: none;
+        }
+        
+        .newsletter-form button {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        .newsletter-form button:hover {
+            background: #e55e00;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h4 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--plumber-blue);
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-col ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-col ul li a:hover {
+            color: white;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-social a:hover {
+            background: var(--plumber-blue);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+        
+        /* Emergency Banner */
+        .emergency-banner {
+            background: var(--accent);
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: sticky;
+            top: 70px;
+            z-index: 999;
+        }
+        
+        .emergency-banner p {
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .emergency-banner p i {
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Service Areas */
+        .service-areas {
+            background: white;
+        }
+        
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .area-card {
+            background: var(--plumber-light);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .area-card:hover {
+            transform: translateY(-5px);
+            background: #d4e9ff;
+        }
+        
+        .area-card i {
+            font-size: 2rem;
+            color: var(--plumber-blue);
+            margin-bottom: 15px;
+        }
+        
+        /* WhatsApp Chat Button */
+        .whatsapp-chat {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .whatsapp-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: var(--whatsapp-green);
+            border-radius: 50%;
+            color: white;
+            font-size: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
+        
+        .whatsapp-text {
+            background: white;
+            padding: 10px 15px;
+            border-radius: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            font-weight: 600;
+            color: var(--dark);
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .whatsapp-chat:hover .whatsapp-text {
+            display: block;
+        }
+        
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            width: 50px;
+            height: 50px;
+            background: var(--plumber-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .scroll-top.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .scroll-top:hover {
+            background: #155a9c;
+            transform: translateY(-5px);
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                flex-direction: column;
+                padding: 20px 0;
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 10px 20px;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .testimonials-container {
+                height: 450px;
+            }
+            
+            .whatsapp-chat {
+                left: 20px;
+                bottom: 20px;
+            }
+            
+            .whatsapp-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.8rem;
+            }
+            
+            .scroll-top {
+                right: 20px;
+                bottom: 20px;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+                border-radius: 10px;
+            }
+            
+            .newsletter-form input {
+                padding: 15px;
+                border-radius: 0;
+            }
+            
+            .newsletter-form button {
+                padding: 15px;
+                border-radius: 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .service-image {
+                height: 150px;
+            }
+            
+            .testimonial {
+                padding: 25px;
+            }
+            
+            .testimonials-container {
+                height: 500px;
+            }
+            
+            .whatsapp-chat {
+                left: 15px;
+                bottom: 15px;
+            }
+            
+            .whatsapp-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+            
+            .scroll-top {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+            }
+            
+            .newsletter-cta h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Chat Button -->
+    <div class="whatsapp-chat">
+        <div class="whatsapp-text">Chat with us on WhatsApp</div>
+        <a href="https://wa.me/15551234567" target="_blank" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+    
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-faucet"></i>
+                <h1>Aqua<span>Flow</span></h1>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#areas">Service Areas</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        <div class="container">
+            <p><i class="fas fa-exclamation-triangle"></i>24/7 Emergency Plumbing Services - Call Now: (555) 123-4567</p>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>Professional Plumbing Solutions You Can Trust</h1>
+            <p>24/7 emergency services with licensed and experienced plumbers serving your area for over 15 years</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn">Request Service</a>
+                <a href="tel:5551234567" class="btn btn-secondary"><i class="fas fa-phone"></i> Call Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section with Images -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Plumbing Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://img.freepik.com/free-photo/man-fixing-kitchen-sink_53876-13430.jpg?ga=GA1.1.72299430.1750322234&w=740&auto=format&fit=crop&w=1468&q=80" alt="Leak Detection">
+                    </div>
+                    <div class="service-content">
+                        <h3>Leak Detection & Repair</h3>
+                        <p>Advanced technology to detect hidden leaks and professional repairs to prevent water damage and save on utility bills.</p>
+                        <a href="#contact" class="btn service-btn">Schedule Service</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://img.freepik.com/free-photo/asian-plumber-blue-overalls-clearing-blockage-drain_1098-17773.jpg?ga=GA1.1.72299430.1750322234&semt=ais_hybrid&w=740&auto=format&fit=crop&w=1470&q=80" alt="Drain Cleaning">
+                    </div>
+                    <div class="service-content">
+                        <h3>Drain Cleaning</h3>
+                        <p>Expert drain cleaning services for clogged sinks, showers, bathtubs, and main sewer lines using state-of-the-art equipment.</p>
+                        <a href="#contact" class="btn service-btn">Schedule Service</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://img.freepik.com/free-photo/man-turning-off-radiator-energy-crisis_23-2150061813.jpg?ga=GA1.1.72299430.1750322234&semt=ais_hybrid&w=740&auto=format&fit=crop&w=1470&q=80" alt="Water Heater Services">
+                    </div>
+                    <div class="service-content">
+                        <h3>Water Heater Services</h3>
+                        <p>Installation, repair, and maintenance of tank and tankless water heaters for reliable hot water in your home.</p>
+                        <a href="#contact" class="btn service-btn">Schedule Service</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Fixture Installation">
+                    </div>
+                    <div class="service-content">
+                        <h3>Fixture Installation</h3>
+                        <p>Professional installation of sinks, faucets, toilets, showers, bathtubs, and other plumbing fixtures.</p>
+                        <a href="#contact" class="btn service-btn">Schedule Service</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://img.freepik.com/free-photo/plumbing-professional-doing-his-job_23-2150721532.jpg?ga=GA1.1.72299430.1750322234&semt=ais_hybrid&w=740&auto=format&fit=crop&w=1470&q=80" alt="Pipe Repair">
+                    </div>
+                    <div class="service-content">
+                        <h3>Pipe Repair & Replacement</h3>
+                        <p>Comprehensive pipe services including repair, replacement, and repiping for residential and commercial properties.</p>
+                        <a href="#contact" class="btn service-btn">Schedule Service</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://img.freepik.com/free-photo/fire-hydrant-use-structure-fire_1153-4467.jpg?ga=GA1.1.72299430.1750322234&semt=ais_hybrid&w=740&auto=format&fit=crop&w=1374&q=80" alt="Sewer Line Services">
+                    </div>
+                    <div class="service-content">
+                        <h3>Sewer Line Services</h3>
+                        <p>Camera inspection, cleaning, repair, and replacement of sewer lines to ensure proper wastewater flow.</p>
+                        <a href="#contact" class="btn service-btn">Schedule Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Our Company</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Your Trusted Plumbing Experts Since 2008</h3>
+                    <p>AquaFlow Plumbing is a family-owned and operated business with over 15 years of experience in providing top-quality plumbing services to residential and commercial clients. Our team of licensed, insured, and background-checked plumbers is dedicated to solving your plumbing problems efficiently and effectively.</p>
+                    <p>We pride ourselves on our commitment to excellence, customer satisfaction, and transparent pricing. When you choose AquaFlow, you can expect prompt, professional service that exceeds your expectations.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div class="feature-text">
+                                <h4>Licensed & Insured</h4>
+                                <p>All our technicians are fully licensed and insured</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div class="feature-text">
+                                <h4>24/7 Availability</h4>
+                                <p>Emergency services available day and night</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div class="feature-text">
+                                <h4>Upfront Pricing</h4>
+                                <p>No hidden fees or surprise charges</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div class="feature-text">
+                                <h4>100% Satisfaction</h4>
+                                <p>Guaranteed quality workmanship</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="btn">Contact Us</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://img.freepik.com/free-photo/plumber-holding-plunger_1368-742.jpg?ga=GA1.1.72299430.1750322234&semt=ais_hybrid&w=740&auto=format&fit=cover&w=1073&q=80" alt="Plumbing Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="why-us">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose AquaFlow Plumbing</h2>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-award"></i>
+                    <h3>Expert Technicians</h3>
+                    <p>Our plumbers are highly trained and experienced with ongoing education to stay current with the latest techniques.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Prompt Service</h3>
+                    <p>We understand plumbing emergencies can't wait. We guarantee on-time arrival for all scheduled appointments.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>Fair Pricing</h3>
+                    <p>Competitive rates with upfront pricing. No hidden fees or surprise charges on your final bill.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Lifetime Warranty</h3>
+                    <p>We stand behind our work with industry-leading warranties on parts and labor for your peace of mind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section id="areas" class="service-areas">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Service Areas</h2>
+            </div>
+            <div class="areas-grid">
+                <div class="area-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Downtown</h3>
+                </div>
+                <div class="area-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Westside</h3>
+                </div>
+                <div class="area-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>North Hills</h3>
+                </div>
+                <div class="area-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>South Park</h3>
+                </div>
+                <div class="area-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Eastwood</h3>
+                </div>
+                <div class="area-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Central District</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Slider -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Customers Say</h2>
+            </div>
+            <div class="testimonials-container">
+                <div class="testimonial-slider">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"AquaFlow Plumbing saved us from a major disaster when our basement started flooding at 2 AM. Their technician arrived within 30 minutes and fixed the burst pipe professionally. I can't recommend them enough for emergency services!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-img">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Michael Johnson</h4>
+                                <p>Homeowner, Westside</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"We had AquaFlow install a tankless water heater in our home. The technician was knowledgeable, efficient, and cleaned up after the job. Our energy bills have decreased significantly and we never run out of hot water!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-img">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Sarah Williams</h4>
+                                <p>Homeowner, Downtown</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"As a property manager, I rely on AquaFlow for all our plumbing needs across multiple buildings. Their consistent quality, fair pricing, and responsive service make them our go-to plumbing company."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-img">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>David Thompson</h4>
+                                <p>Property Manager</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"After a bad experience with another plumber, I called AquaFlow to fix a persistent leak. They diagnosed the problem immediately, explained everything clearly, and fixed it at a fair price. Their professionalism is unmatched."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-img">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Jennifer Martinez</h4>
+                                <p>Homeowner, North Hills</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-controls">
+                <button class="testimonial-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="testimonial-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="testimonial-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Our Location</h4>
+                            <p>123 Main Street, Suite 100<br>Anytown, ST 12345</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>Office: (555) 123-4567<br>Emergency: (555) 765-4321</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>info@aquaflowplumbing.com<br>support@aquaflowplumbing.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Business Hours</h4>
+                            <p>Monday-Friday: 8am - 6pm<br>Saturday: 9am - 4pm<br>Sunday: Emergency Only</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="serviceForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Your Phone" required>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="" disabled selected>Select Service</option>
+                                <option>Leak Detection & Repair</option>
+                                <option>Drain Cleaning</option>
+                                <option>Water Heater Services</option>
+                                <option>Fixture Installation</option>
+                                <option>Pipe Repair & Replacement</option>
+                                <option>Sewer Line Services</option>
+                                <option>Emergency Service</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter CTA Section -->
+    <section class="newsletter-cta">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated with Plumbing Tips & Special Offers</h2>
+                <p>Subscribe to our newsletter and receive expert advice, maintenance tips, and exclusive discounts directly to your inbox.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <div class="logo">
+                        <i class="fas fa-faucet"></i>
+                        <h1>Aqua<span>Flow</span></h1>
+                    </div>
+                    <p>Professional plumbing services for residential and commercial clients. Licensed, insured, and committed to excellence since 2008.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#areas">Service Areas</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#">Leak Detection & Repair</a></li>
+                        <li><a href="#">Drain Cleaning</a></li>
+                        <li><a href="#">Water Heater Services</a></li>
+                        <li><a href="#">Fixture Installation</a></li>
+                        <li><a href="#">Pipe Repair & Replacement</a></li>
+                        <li><a href="#">Sewer Line Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Main Street, Suite 100</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@aquaflowplumbing.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 8am - 6pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 AquaFlow Plumbing. All Rights Reserved. | License #PL123456</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('nav ul');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                navMenu.classList.remove('show');
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Form submission
+        const contactForm = document.querySelector('.contact-form form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! We will contact you shortly.');
+                this.reset();
+            });
+        }
+        
+        // Newsletter form submission
+        const newsletterForm = document.querySelector('.newsletter-form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = this.querySelector('input[type="email"]').value;
+                alert(`Thank you for subscribing with ${email}! You'll receive our next newsletter soon.`);
+                this.reset();
+            });
+        }
+        
+        // Sticky header background
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+            
+            // Scroll to top button
+            const scrollTopBtn = document.querySelector('.scroll-top');
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('active');
+            } else {
+                scrollTopBtn.classList.remove('active');
+            }
+        });
+        
+        // Scroll to top functionality
+        const scrollTopBtn = document.querySelector('.scroll-top');
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Testimonial Slider
+        const slider = document.querySelector('.testimonial-slider');
+        const testimonials = document.querySelectorAll('.testimonial');
+        const dots = document.querySelectorAll('.dot');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        
+        let currentIndex = 0;
+        const testimonialCount = testimonials.length;
+        
+        // Initialize slider
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+        
+        // Next testimonial
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % testimonialCount;
+            updateSlider();
+        });
+        
+        // Previous testimonial
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + testimonialCount) % testimonialCount;
+            updateSlider();
+        });
+        
+        // Dot navigation
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                updateSlider();
+            });
+        });
+        
+        // Auto slide
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % testimonialCount;
+            updateSlider();
+        }, 5000);
+    </script>
+</body>
+</html>
